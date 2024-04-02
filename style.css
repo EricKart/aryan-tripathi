@@ -267,12 +267,18 @@ p {
 }
 #project1 {
   background-image: url(./piggame.png);
+  width:auto ;
+  height: 100px;
 }
 #project2 {
   background-image: url(./mapty.png);
+  width:auto ;
+  height: 100px;
 }
 #project3 {
   background: url(./api.png);
+  width:auto ;
+  height: 100px;
 }
 .timeline {
   position: relative;
