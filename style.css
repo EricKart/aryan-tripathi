@@ -225,7 +225,7 @@ p {
   border: 3px solid #fff; /* White border */
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
   display: block;
-  margin: 20px auto; /* Center the image if in a flex container, adjust as needed */
+  margin: 2px auto; /* Center the image if in a flex container, adjust as needed */
 }
 
 .contact-info {
@@ -267,18 +267,18 @@ p {
 }
 #project1 {
   background-image: url(./piggame.png);
-  width:auto ;
-  height: 100px;
+  width: auto;
+  height: 150px;
 }
 #project2 {
   background-image: url(./mapty.png);
-  width:auto ;
-  height: 100px;
+  width: auto;
+  height: 150px;
 }
 #project3 {
   background: url(./api.png);
-  width:auto ;
-  height: 100px;
+  width: auto;
+  height: 150px;
 }
 .timeline {
   position: relative;
@@ -331,3 +331,34 @@ p {
 .event:nth-child(5)::before {
   background-color: #f1c40f;
 } /* Gold */
+
+#skills {
+  text-align: center;
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill {
+  width: 100px; /* Adjust based on your preference */
+  text-align: center;
+  margin: 10px;
+}
+
+.skill img {
+  width: 80px; /* Adjust based on your preference */
+  height: 80px; /* Maintain aspect ratio */
+  border-radius: 50%; /* Makes the image round */
+  margin-bottom: 5px;
+}
+
+.skill p {
+  font-size: 0.9rem;
+  color: #333;
+}
