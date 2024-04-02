@@ -1,73 +1,254 @@
+/* styles.css */
 /* Basic Reset */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body,
-html {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+body {
+  font-family: "Arial", sans-serif;
+  background: #f4f4f4;
   color: #333;
   line-height: 1.6;
-  background: linear-gradient(
-    to bottom right,
-    #eef2f3,
-    #8e9eab
-  ); /* Subtle gradient background */
-  padding: 20px 40px;
-  animation: fadeIn 2s ease-out;
 }
 
-/* Typography */
-h1,
-h2,
-h3 {
+/* Navigation Bar */
+nav {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-items {
+  list-style: none;
+}
+
+.nav-items li {
+  display: inline;
+  padding: 0 20px;
+}
+
+.nav-items li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-content {
+  max-width: 60%;
+  margin-left: 50px;
+}
+
+.profile-img {
+  max-width: 150px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  margin-left: 20px; /* Ensures some space between text and image */
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .text-content {
+    max-width: 100%;
+  }
+}
+
+.hero {
+  background: url("path_to_your_hero_background") no-repeat center center/cover;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* Projects Section */
+#projects {
+  padding: 2rem;
+  background: #fff;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#projects article {
+  margin-bottom: 2rem;
+  background: #e7e7e7;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#projects .project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+#projects .project-link:hover {
+  background-color: #0056b3; /* Darker Shade on Hover */
+}
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .nav-items li {
+    display: block;
+    padding: 10px;
+  }
+}
+section {
+  padding: 4rem 0;
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
   color: #333;
+}
+
+.article,
+.about-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
 p {
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 1rem;
 }
 
-/* Navigation */
-nav ul {
-  list-style: none;
-  text-align: center;
-  background: #333;
-  padding: 10px 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-nav ul li a {
+.project-link,
+.resume-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
   text-decoration: none;
-  color: #fff;
-  font-size: 20px;
-  transition: color 0.3s ease-in-out;
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
-  color: #f4f4f4;
+.project-link:hover,
+.resume-link:hover {
+  background-color: #0056b3;
 }
 
-/* Section Styling */
-section {
-  background: white;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .article,
+  .about-content {
+    flex: 1;
+    min-width: calc(50% - 10px);
+  }
+}
+.resume-link {
+  background-color: #333; /* Primary Button Color */
+  color: #ffffff; /* Text Color */
+  padding: 12px 25px; /* Padding for Button Size */
+  border-radius: 5px; /* Rounded Corners */
+  transition: background-color 0.3s; /* Smooth Background Color Transition on Hover */
+  text-decoration: none; /* Remove Underline */
+  font-weight: bold; /* Bold Text */
+  margin-top: 20px; /* Space from the Text Above */
 }
 
-/* Contact Styling */
+.resume-link:hover {
+  background-color: #0056b3; /* Darker Shade on Hover */
+}
+
+.profile-img {
+  width: 400px; /* Increased size */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Slightly rounded corners */
+  border: 3px solid #fff; /* White border */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+  display: block;
+  margin: 20px auto; /* Center the image if in a flex container, adjust as needed */
+}
+
 .contact-info {
   list-style: none;
   padding: 0;
+}
+#flex-containersvgs {
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the right */
+  align-items: center; /* Centers items vertically */
+  gap: 15px; /* Space between each item */
+  padding: 10px; /* Padding around the container */
+}
+
+#flex-containersvgs svg {
+  width: 24px; /* Adjust the size of icons */
+  height: 24px; /* Adjust the size of icons */
+  fill: currentColor; /* Icon color */
+}
+@media (max-width: 768px) {
+  #flex-containersvgs {
+    justify-content: center; /* Center items on smaller screens */
+  }
 }
 
 .contact-info li {
@@ -84,244 +265,63 @@ section {
 .contact-info li a:focus {
   color: #007bff;
 }
-
-/* Footer */
-footer {
-  text-align: center;
+#project1 {
+  background-image: url(./piggame.png);
+}
+#project2 {
+  background-image: url(./mapty.png);
+}
+#project3 {
+  background: url(./api.png);
+}
+.timeline {
+  position: relative;
+  margin: 20px;
   padding: 20px;
-  background: #333;
-  color: #fff;
-  margin-top: 20px;
 }
 
-/* Loader Styles */
-#loader-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
   height: 100%;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  border-left: 2px solid #007bff; /* Colorful line */
 }
 
-#loader {
-  border: 4px solid #f3f3f3;
+.event {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 50px;
+}
+
+.event::before {
+  content: attr(data-year);
+  position: absolute;
+  left: -45px;
+  background-color: #007bff; /* Match line color */
+  color: white;
+  padding: 5px 10px;
   border-radius: 50%;
-  border-top: 4px solid #3498db;
-  width: 50px;
-  height: 50px;
-  animation: spin 2s linear infinite;
+  font-weight: bold;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.event span {
+  background-color: #f0f0f0; /* Light background for text */
+  padding: 5px;
+  border-radius: 4px;
 }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  body {
-    padding: 20px;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-}
-#siteLogo {
-  height: 100px; /* Adjust based on your preference */
-  margin-bottom: 20px;
-}
-.name-logo-container {
-  position: relative;
-  cursor: pointer;
-}
-
-#name,
-#siteLogo {
-  transition: opacity 0.5s ease;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-}
-
-#name {
-  opacity: 1;
-}
-
-#siteLogo {
-  opacity: 0;
-  width: 120px; /* Adjust based on your logo's size */
-  height: auto;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.name-logo-container:hover #name {
-  opacity: 0;
-}
-
-.name-logo-container:hover #siteLogo {
-  opacity: 1;
-}
-a {
-  position: relative;
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #007bff; /* Adjust the hover color as needed */
-}
-
-a::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 50%;
-  background-color: #007bff; /* Adjust the underline color as needed */
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-a:hover::before {
-  visibility: visible;
-  width: 100%;
-  left: 0;
-}
-h1::after,
-h2::after,
-h3::after {
-  content: "";
-  position: absolute;
-  bottom: -10px; /* Positioning below the text */
-  left: 50%; /* Starting point at the center */
-  transform: translateX(-50%); /* Centering the line */
-  width: 50%; /* Making the line shorter */
-  height: 2px; /* Making the line thinner */
-  background-color: #3498db; /* Subtle blue color */
-  transition: width 0.3s ease;
-}
-
-h1:hover::after,
-h2:hover::after,
-h3:hover::after {
-  width: 100%; /* Line expands on hover */
-}
-h1,
-h2,
-h3 {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-}
-h1,
-h2,
-h3 {
-  padding-bottom: 5px; /* Space for the border */
-  border-bottom: 2px solid #3498db; /* Subtle border */
-  width: max-content; /* Fits the border to the text width */
-  margin-left: auto; /* Center align the heading if desired */
-  margin-right: auto; /* Center align the heading if desired */
-}
-.project-item {
-  margin-bottom: 2rem;
-}
-
-.project-item h3 {
-  color: #007bff; /* Eye-catching color for project titles */
-}
-
-.project-item p {
-  color: #666; /* Subdued color for description text */
-  margin-bottom: 1rem;
-}
-
-.project-item a {
-  color: #007bff; /* Color that stands out for links */
-  text-decoration: underline; /* Makes it clear that this is a link */
-  text-decoration-color: #007bff; /* Custom color for the underline */
-  text-decoration-thickness: 2px; /* Thicker underline for prominence */
-  text-underline-offset: 3px; /* Space between text and underline */
-  transition: color 0.3s ease, text-decoration-color 0.3s ease; /* Smooth transition for hover effects */
-}
-
-.project-item a:hover,
-.project-item a:focus {
-  color: #0056b3; /* Darker shade on hover/focus for interaction feedback */
-  text-decoration-color: #0056b3; /* Matching the hover color */
-}
-/* General styling for all sections */
-section {
-  position: relative;
-  overflow: hidden;
-  background-color: #fff; /* Initial light background */
-  color: #000; /* Initial text color */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
-}
-
-/* Hover effect for dark mode transition */
-section:hover {
-  background-color: #333; /* Dark background for hovered section */
-  color: #fff; /* Light text for contrast */
-}
-
-/* Ensuring text within hovered sections remains visible and transitions smoothly */
-section h1,
-section h2,
-section h3,
-section p,
-section a {
-  transition: color 0.3s ease; /* Smooth color transition */
-}
-
-section:hover h1,
-section:hover h2,
-section:hover h3,
-section:hover p,
-section:hover a {
-  color: #fff; /* Ensures text and links are visible against the dark background */
-}
-
-/* Styling for links within sections */
-section a {
-  text-decoration: none; /* Removes underline by default */
-  background-size: 100% 1px; /* Full-width underline */
-  background-position: 0 100%; /* Position underline at the bottom of the text */
-  background-repeat: no-repeat; /* Prevents repeating background */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for link color and background */
-}
-
-/* Hover effect for links within dark mode hovered sections */
-section:hover a {
-  color: #fff; /* White color for links in hovered section for readability */
-  text-decoration-color: #fff; /* White underline for consistency */
-}
-
-/* Additional hover effect for individual links */
-section a:hover,
-section a:focus {
-  color: #bbb; /* Lighter grey for link hover state for more visibility */
-  text-decoration: underline; /* Underline effect for direct hover over links */
-  text-decoration-color: #bbb; /* Matching the text color */
-}
+.event:nth-child(1)::before {
+  background-color: #76b852;
+} /* Green */
+.event:nth-child(2)::before {
+  background-color: #3498db;
+} /* Blue */
+.event:nth-child(3)::before {
+  background-color: #f39c12;
+} /* Orange */
+.event:nth-child(4)::before {
+  background-color: #e74c3c;
+} /* Red */
+.event:nth-child(5)::before {
+  background-color: #f1c40f;
+} /* Gold */
